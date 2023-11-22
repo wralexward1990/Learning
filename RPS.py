@@ -1,11 +1,10 @@
+#Import modules
 import random
-
 from colorama import Fore, Style
 
+#Code Start
 while True:
-  print(
-      f"{Style.BRIGHT}Welcome to the Rock, Paper, Scissors game!{Style.NORMAL}"
-  )
+  print(f"{Style.BRIGHT}Welcome to the Rock, Paper, Scissors game!{Style.NORMAL}")
 
   def get_choices():
     player_choice = input("Rock, Paper, or Scissors? ")
@@ -15,9 +14,7 @@ while True:
     return choices
 
   def check_win(player, computer):
-    print(
-        f"{Fore.MAGENTA}You chose {player} and the Computer chose {computer}.{Fore.WHITE}"
-    )
+    print(f"{Fore.MAGENTA}You chose {player} and the Computer chose {computer}.{Fore.WHITE}" )
     if player == computer:
       return f"{Fore.GREEN}Tie{Fore.WHITE}"
     elif player == "rock":
