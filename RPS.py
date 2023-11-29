@@ -7,7 +7,7 @@ while True:
   print(f"{Style.BRIGHT}Welcome to the Rock, Paper, Scissors game!{Style.NORMAL}")
 
   def get_choices():
-    player_choice = input("Rock, Paper, or Scissors? ")
+    player_choice = input("Rock, Paper, or Scissors? ").capitalize()
     options = ["rock", "paper", "scissors"]
     computer_choice = random.choice(options)
     choices = {"player": player_choice, "computer": computer_choice}
@@ -17,18 +17,18 @@ while True:
     print(f"{Fore.MAGENTA}You chose {player} and the Computer chose {computer}.{Fore.WHITE}" )
     if player == computer:
       return f"{Fore.GREEN}Tie{Fore.WHITE}"
-    elif player == "rock":
-      if computer == "scissors":
-        return f"{Fore.BLUE}Rock smashes scissors. You win!{Fore.WHITE}"
+    elif player == "Rock":
+      if computer == "Scissors":
+        return f"{Fore.BLUE}Rock smashes Scissors. You win!{Fore.WHITE}"
       else:
         return f"{Fore.RED}Paper covers rock. You lose.{Fore.WHITE}"
-    elif player == "scissors":
-      if computer == "paper":
-        return f"{Fore.BLUE}Scissors cut paper. You win!{Fore.WHITE}"
+    elif player == "Scissors":
+      if computer == "Paper":
+        return f"{Fore.BLUE}Scissors cut Paper. You win!{Fore.WHITE}"
       else:
         return f"{Fore.RED}Rock smashes scissors. You lose.{Fore.WHITE}"
-    elif player == "paper":
-      if computer == "rock":
+    elif player == "Paper":
+      if computer == "Rock":
         return f"{Fore.BLUE}Paper covers rock. You win!{Fore.WHITE}"
       else:
         return f"{Fore.RED}Scissors cut paper. You lose.{Fore.WHITE}"
